@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sudo curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update && sudo chmod +x /usr/bin/rpi-update
+sudo REPO_URI=https://github.com/notro/rpi-firmware rpi-update
+
+cd /boot
+
+sudo mv kernel.img kernel.img.bak
+
+wget videogp21.site88.net/tft/kernel.img
+
+sudo reboot
