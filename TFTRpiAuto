@@ -7,8 +7,9 @@ sudo REPO_URI=https://github.com/notro/rpi-firmware rpi-update
 
 
 
-
+sudo rm /boot/kernel.img.bak -r
 sudo mv /boot/kernel.img /boot/kernel.img.bak
+
 sudo cp kernel.img /boot/
 
 sudo reboot
